@@ -1,1 +1,1 @@
-import e,{useState as t}from"react";const r=({defaultValue:r})=>{const[a,l]=t(1);return e.createElement("div",null,"Editor 에요 ",r||"hi~"," value: ",a)};export{r as default};
+import e,{useState as t,useEffect as r}from"react";function a({defaultValue:a}){const[l,n]=t(1);return r((()=>{const e=setInterval((()=>{n((e=>e+1))}),1e3);return()=>clearInterval(e)}),[]),e.createElement("div",null,"Editor 에요 ",a||"hi~"," value: ",l)}export{a as default};

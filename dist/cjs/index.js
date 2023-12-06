@@ -1,1 +1,1 @@
-"use strict";var e=require("react");module.exports=({defaultValue:t})=>{const[r,u]=e.useState(1);return e.createElement("div",null,"Editor 에요 ",t||"hi~"," value: ",r)};
+"use strict";var e=require("react");module.exports=function({defaultValue:t}){const[r,u]=e.useState(1);return e.useEffect((()=>{const e=setInterval((()=>{u((e=>e+1))}),1e3);return()=>clearInterval(e)}),[]),e.createElement("div",null,"Editor 에요 ",t||"hi~"," value: ",r)};
