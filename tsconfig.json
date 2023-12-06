@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "dts/dts",
+    "declarationDir": "dist/dts",
     "module": "esnext",
     "outDir": "./dist/dts",
     "target": "es6",
