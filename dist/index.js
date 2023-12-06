@@ -1,1 +1,1 @@
-const o=o=>{console.log(`Hi, ${o}`)},e=o=>{console.log(`Bye, ${o}`)};export{e as sayBye,o as sayHi};
+const o=o=>{console.log(`Bye, ${o}`)},e=o=>{console.log(`Hi, ${o}`)};export{o as sayBye,e as sayHi};

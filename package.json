@@ -1,6 +1,6 @@
 {
   "name": "@hyxn/lite-editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Super-light-weight Editor for common use",
   "type": "module",
   "main": "dist/index.js",
@@ -9,7 +9,6 @@
     "/dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist/* && rollup -c"
   },
   "repository": {
