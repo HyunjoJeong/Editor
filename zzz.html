@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper" contenteditable="true"><div id="here">ff</div></div>
+    <button type="button" id="submitBtn">제출</button>
+    <script>
+      const abc = document.createElement("p");
+      abc.textContent = "hi";
+
+      document.getElementById("here").appendChild(abc);
+      document.getElementById("here").addEventListener("paste", async (e) => {
+        const clipboardData = e.clipboardData.files;
+        if (clipboardData[0].type.startsWith("image/")) {
+          // clipboardData[0]는 File임.
+          console.log(clipboardData[0]);
+        }
+      });
+
+      document
+        .getElementById("wrapper")
+        .setAttribute(
+          "style",
+          `height: 200px; border: 1px solid black; outline: none`
+        );
+
+      const submitButton = document.getElementById("submitBtn");
+
+      const handleSubmit = () => {
+        const newContents = document.getElementById("here").cloneNode(true);
+        newContents.removeAttribute("id");
+        document.body.insertAdjacentElement("beforeend", newContents);
+      };
+
+      submitButton.addEventListener("click", handleSubmit);
+    </script>
+  </body>
+</html>
