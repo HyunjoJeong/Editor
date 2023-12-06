@@ -1,16 +1,16 @@
 {
-  "name": "lite-editor",
-  "version": "0.0.1",
+  "name": "@hyxn/lite-editor",
+  "version": "0.0.2",
   "description": "Super-light-weight Editor for common use",
   "type": "module",
-  "main": "dist/my-library.js",
-  "types": "dist/my-library.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "rimraf dist/* && rollup -c"
+    "build": "rimraf dist/* && rollup -c"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
     "@types/node": "^20.10.3",
     "rimraf": "^5.0.5",
     "rollup": "^4.6.1",
-    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.6.2",
     "typescript": "^5.3.2"

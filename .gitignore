@@ -2,7 +2,3 @@
 
 # dependencies
 /node_modules
-
-# 기타 설정들
-# rollup.config.mjs
-# tsconfig.json

@@ -1,22 +1,13 @@
-import typescript from "rollup-plugin-typescript2";
 import terser from "@rollup/plugin-terser";
-import dts from "rollup-plugin-dts";
+import typescript from "rollup-plugin-typescript2";
 
 export default [
   {
     input: "src/index.ts",
     output: {
-      file: "dist/my-library.js",
+      file: "dist/index.js",
       format: "es",
     },
     plugins: [typescript(), terser()],
-  },
-  {
-    input: "src/index.ts",
-    output: {
-      file: "dist/my-library.d.ts",
-      format: "es",
-    },
-    plugins: [dts()],
   },
 ];
