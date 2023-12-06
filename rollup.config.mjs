@@ -20,7 +20,7 @@ export default [
       external({ includeDependencies: true }),
       resolve(),
       terser(),
-      typescript(),
+      typescript({ useTsconfigDeclarationDir: true }),
     ],
   },
 ];
