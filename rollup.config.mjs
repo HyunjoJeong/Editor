@@ -7,11 +7,17 @@ import typescript from "rollup-plugin-typescript2";
 export default [
   {
     input: "src/index.tsx",
-    output: {
-      file: "dist/index.js",
-      format: "es",
-      exports: "named",
-    },
+    output: [
+      {
+        file: "dist/cjs/index.js",
+        format: "cjs",
+      },
+      {
+        file: "dist/esm/index.js",
+        format: "es",
+        exports: "named",
+      },
+    ],
     plugins: [
       babel({
         exclude: "node_modules/**",
