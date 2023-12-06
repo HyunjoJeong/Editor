@@ -1,6 +1,5 @@
 import React from "react";
-type Editor = ({ defaultValue, }: {
-    defaultValue?: string;
+declare const Editor: ({ defaultValue }: {
+    defaultValue?: string | undefined;
 }) => React.JSX.Element;
-declare const Editor: Editor;
 export default Editor;

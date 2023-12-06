@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
-type Editor = ({
-  defaultValue,
-}: {
-  defaultValue?: string;
-}) => React.JSX.Element;
+const Editor = ({ defaultValue }: { defaultValue?: string }) => {
+  const [value, setValue] = useState(1);
 
-const Editor: Editor = ({ defaultValue }) => {
-  const [value, setValue] = useState(defaultValue || "hi");
-  return <div>Editor 에요 {value}</div>;
+  return (
+    <div>
+      Editor 에요 {defaultValue || "hi~"} value: {value}
+    </div>
+  );
 };
 
 export default Editor;
