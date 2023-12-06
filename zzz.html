@@ -6,12 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="wrapper" contenteditable="true"><div id="here">ff</div></div>
+    <div id="wrapper"><div id="here" contenteditable="true">ff</div></div>
     <button type="button" id="submitBtn">제출</button>
     <script>
       const abc = document.createElement("p");
       abc.textContent = "hi";
 
+      document
+        .getElementById("here")
+        .setAttribute("style", `height: 100%; outline: none;`);
       document.getElementById("here").appendChild(abc);
       document.getElementById("here").addEventListener("paste", async (e) => {
         const clipboardData = e.clipboardData.files;
@@ -25,7 +28,7 @@
         .getElementById("wrapper")
         .setAttribute(
           "style",
-          `height: 200px; border: 1px solid black; outline: none`
+          `height: 200px; border: 1px solid #d9d9d9; padding: 6px 8px; border-radius: 6px;`
         );
 
       const submitButton = document.getElementById("submitBtn");
