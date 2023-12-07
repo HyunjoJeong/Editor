@@ -28,8 +28,8 @@ export default function Editor({
         {toolBar?.map((bar, idx) => {
           return (
             <div className="hyxn-editor-toolbar" key={`toolbar${idx}`}>
-              {bar.map((tool) => {
-                return <button>{tool}</button>;
+              {bar.map((tool, idx) => {
+                return <button key={`tool${idx}`}>{tool}</button>;
               })}
             </div>
           );
