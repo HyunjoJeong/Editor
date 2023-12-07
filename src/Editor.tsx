@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect, useRef } from "react";
+import React, { CSSProperties, useRef } from "react";
 
 type EditorProps = {
   initialContent?: string;
@@ -12,12 +12,6 @@ export default function Editor({
   wrapperStyle,
 }: EditorProps) {
   const editorRef = useRef(null);
-
-  useEffect(() => {
-    if (editorRef) {
-      console.log(editorRef);
-    }
-  }, []);
 
   return (
     <div
