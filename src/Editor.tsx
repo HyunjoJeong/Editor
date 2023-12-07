@@ -29,7 +29,7 @@ export default function Editor({
           return (
             <div className="hyxn-editor-toolbar" key={`toolbar${idx}`}>
               {bar.map((tool) => {
-                return <button>tool</button>;
+                return <button>{tool}</button>;
               })}
             </div>
           );
@@ -41,6 +41,7 @@ export default function Editor({
         className="hyxn-editor-main"
         ref={editorRef}
         contentEditable={true}
+        suppressContentEditableWarning
         style={{}}
       >
         {initialContent}
