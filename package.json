@@ -1,6 +1,6 @@
 {
   "name": "@hyxn/editor",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Light-weight React Editor",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "clear": "rimraf dist/*",
-    "build": "rimraf dist/* && rollup -c"
+    "build": "rimraf dist/* && rollup -c",
+    "publish": "npm run build && npm install && npm publish"
   },
   "repository": {
     "type": "git",

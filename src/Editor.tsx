@@ -1,18 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { CSSProperties, useEffect, useRef } from "react";
 
-export default function Editor({ defaultValue }: { defaultValue?: string }) {
-  const [value, setValue] = useState(1);
+type EditorProps = {
+  initialContent?: string;
+  toolBar?: string[][]; // * 나중에 string을 구체적인 tool 이름들로 바꾸자.
+  wrapperStyle?: CSSProperties;
+};
+
+export default function Editor({
+  initialContent,
+  toolBar,
+  wrapperStyle,
+}: EditorProps) {
+  const editorRef = useRef(null);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setValue((prev) => prev + 1);
-    }, 1000);
-    return () => clearInterval(id);
+    if (editorRef) {
+      console.log(editorRef);
+    }
   }, []);
 
   return (
-    <div>
-      Editor 에요 {defaultValue || "hi~"} value: {value}
+    <div
+      className="hyxn-eidtor-wrapper"
+      style={composeWrapperStyle(wrapperStyle)}
+    >
+      <div className="hyxn-editor-toolbar-wrapper">
+        {toolBar?.map((bar, idx) => {
+          return (
+            <div className="hyxn-editor-toolbar" key={`toolbar${idx}`}>
+              {bar.map((tool) => {
+                return <button>tool</button>;
+              })}
+            </div>
+          );
+        })}
+        <div className="hyxn-editor-toolbar"></div>
+        <div className="hyxn-editor-toolbar"></div>
+      </div>
+      <div
+        className="hyxn-editor-main"
+        ref={editorRef}
+        contentEditable={true}
+        style={{}}
+      >
+        {initialContent}
+      </div>
     </div>
   );
 }
+
+const composeWrapperStyle = (styles?: CSSProperties): CSSProperties => {
+  return {
+    border: "1px solid #d9d9d9",
+    backgroundColor: "#fff",
+    ...styles,
+  };
+};
