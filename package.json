@@ -1,13 +1,13 @@
 {
   "name": "@hyxn/editor",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "Light-weight React Editor",
-  "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "clear": "rimraf dist/*",
