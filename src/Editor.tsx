@@ -7,7 +7,7 @@ type EditorProps = {
 };
 
 const Editor = forwardRef(function Editor(
-  { initialContent, toolBar, wrapperStyle }: EditorProps,
+  { initialContent = "", toolBar, wrapperStyle }: EditorProps,
   ref?: ForwardedRef<HTMLDivElement> | undefined
 ) {
   return (
@@ -34,9 +34,8 @@ const Editor = forwardRef(function Editor(
         contentEditable={true}
         suppressContentEditableWarning
         style={{}}
-      >
-        {initialContent}
-      </div>
+        dangerouslySetInnerHTML={{ __html: initialContent }}
+      />
     </div>
   );
 });
