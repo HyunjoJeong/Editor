@@ -13,6 +13,7 @@
     "clear": "rimraf dist/*",
     "build": "rimraf dist/* && rollup -c",
     "patch": "npm version patch && npm run build && npm publish",
+    "cz": "cz",
     "git": "git add . && cz && git push",
     "all": "npm run git && npm run patch"
   },
