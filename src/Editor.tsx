@@ -12,6 +12,7 @@ export default function Editor({
   wrapperStyle,
 }: EditorProps) {
   const editorRef = useRef(null);
+  const 아무거나 = 1;
 
   return (
     <div
