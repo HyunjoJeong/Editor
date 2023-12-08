@@ -11,11 +11,11 @@ module.exports = {
   messages: {
     type: "commit type:",
     subject: "commit msg:",
-    body: "Extra msg? (optional)\n",
+    body: "Extra descriptions? (optional)\n",
     confirmCommit: "press Enter to proceed commit (n key to abort)",
   },
   allowCustomScopes: false,
   allowBreakingChanges: ["feat", "fix"],
-  skipQuestions: ["footer"],
+  skipQuestions: ["scope", "body", "footer"],
   subjectLimit: 100,
 };
