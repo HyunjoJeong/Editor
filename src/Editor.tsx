@@ -1,19 +1,23 @@
-import React, { CSSProperties, useRef } from "react";
+import React, {
+  CSSProperties,
+  MutableRefObject,
+  forwardRef,
+  useRef,
+} from "react";
 
 type EditorProps = {
+  ref: MutableRefObject<null>;
   initialContent?: string;
   toolBar?: string[][]; // * 나중에 string을 구체적인 tool 이름들로 바꾸자.
   wrapperStyle?: CSSProperties;
 };
 
-export default function Editor({
+const Editor = forwardRef(function Editor({
+  ref,
   initialContent,
   toolBar,
   wrapperStyle,
 }: EditorProps) {
-  const editorRef = useRef(null);
-  const 아무거나 = 1;
-
   return (
     <div
       className="hyxn-eidtor-wrapper"
@@ -34,7 +38,7 @@ export default function Editor({
       </div>
       <div
         className="hyxn-editor-main"
-        ref={editorRef}
+        ref={ref}
         contentEditable={true}
         suppressContentEditableWarning
         style={{}}
@@ -43,7 +47,9 @@ export default function Editor({
       </div>
     </div>
   );
-}
+});
+
+export default Editor;
 
 const composeWrapperStyle = (styles?: CSSProperties): CSSProperties => {
   return {
