@@ -12,7 +12,8 @@
   "scripts": {
     "clear": "rimraf dist/*",
     "build": "rimraf dist/* && rollup -c",
-    "patch": "npm run build && npm version patch && npm publish"
+    "patch": "npm run build && npm version patch && npm publish",
+    "git": "git commit -a && git push"
   },
   "repository": {
     "type": "git",
