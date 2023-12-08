@@ -8,7 +8,7 @@ type EditorProps = {
 
 const Editor = forwardRef(function Editor(
   { initialContent, toolBar, wrapperStyle }: EditorProps,
-  ref?: ForwardedRef<HTMLInputElement> | undefined
+  ref?: ForwardedRef<HTMLDivElement> | undefined
 ) {
   return (
     <div
