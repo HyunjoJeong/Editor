@@ -12,7 +12,7 @@
   "scripts": {
     "clear": "rimraf dist/*",
     "build": "rimraf dist/* && rollup -c",
-    "patch": "npm run build && npm version patch && npm publish",
+    "patch": "npm version patch && npm run build && npm publish",
     "git": "git add . && cz && git push",
     "update": "npm run patch && npm run git"
   },
