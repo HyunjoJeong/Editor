@@ -1,23 +1,15 @@
-import React, {
-  CSSProperties,
-  MutableRefObject,
-  forwardRef,
-  useRef,
-} from "react";
+import React, { CSSProperties, ForwardedRef, forwardRef } from "react";
 
 type EditorProps = {
-  ref: MutableRefObject<null>;
   initialContent?: string;
   toolBar?: string[][]; // * 나중에 string을 구체적인 tool 이름들로 바꾸자.
   wrapperStyle?: CSSProperties;
 };
 
-const Editor = forwardRef(function Editor({
-  ref,
-  initialContent,
-  toolBar,
-  wrapperStyle,
-}: EditorProps) {
+const Editor = forwardRef(function Editor(
+  { initialContent, toolBar, wrapperStyle }: EditorProps,
+  ref?: ForwardedRef<HTMLInputElement> | undefined
+) {
   return (
     <div
       className="hyxn-eidtor-wrapper"
