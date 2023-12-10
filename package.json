@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HyunjoJeong/SimpleEditor.git"
+    "url": "git+https://github.com/HyunjoJeong/Editor.git"
   },
   "keywords": [
     "editor",
@@ -28,10 +28,10 @@
   "author": "Hyunjo Jeong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HyunjoJeong/SimpleEditor/issues",
+    "url": "https://github.com/HyunjoJeong/Editor/issues",
     "email": "hyunjo010618@gmail.com"
   },
-  "homepage": "https://github.com/HyunjoJeong/SimpleEditor",
+  "homepage": "https://github.com/HyunjoJeong/Editor",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
